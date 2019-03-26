@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="contain" style="width: 800px;height: 400px;"></div>
+</body>
+<script src="YwtUtil.js"></script>
+<script>
+    //牙位图准备工作[参数说明见方法体]
+    var util=new YwtUtil("contain","2.jpg");
+    //初始化环境[必须的]
+    util.init();
+    //设置图形的默认填充色
+    util.setNormalColor("rgba(0,0,0,0.7)");
+    //开启鼠标二态效果及颜色设置
+    util.openMouseState("rgba(0,0,0,0.2)");
+
+    //绘制扇形[参数说明见方法体]
+    // util.createSector(100,250,100,0,0.7,function (obj) {
+    //     console.warn("这是第1个扇形"+JSON.stringify(obj));
+    // });
+    
+    // util.createSector(300,250,100,1.3,0,function (obj) {
+    //     console.warn("这是第2个扇形"+JSON.stringify(obj));
+    // });
+
+    //绘制圆形[参数说明见方法体]
+    // util.createSector(460,350,50,0,2,function (obj) {
+    //     console.warn("这是一个圆形"+JSON.stringify(obj));
+    // });
+
+    //绘制镂空扇形[参数说明见方法体]
+    util.createSemSector(100,100,40,80,3.15,0,function (obj) {
+        console.warn("这是一个镂空扇形"+JSON.stringify(obj));
+    });
+
+    //绘制矩形[参数说明见方法体]
+    util.createRect(350,50,150,50,function (obj) {
+        console.warn("这是个矩形"+JSON.stringify(obj));
+    });
+</script>
+</html>
