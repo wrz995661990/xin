@@ -56,6 +56,9 @@ function YwtUtil(canvasId,imgUrl) {
         this.normalColor=normalColor;
     };
 
+
+
+    
     /**
      * 绘图-扇形
      * @param x 中心X坐标
